@@ -8,8 +8,17 @@ def convert(number):
 
     numeral = ''
     while number > 0:
-        for unit in units:
+        for index, unit in enumerate(units):
             if number >= unit:
+                if index != 0:
+                    previous_unit = units[index - 1]
+                    abbreviated_unit = previous_unit - unit
+
+                    if number == abbreviated_unit:
+                        numeral += numerals[unit] + numerals[previous_unit]
+                        number -= abbreviated_unit
+                        break
+
                 numeral += numerals[unit]
                 number -= unit
                 break
