@@ -22,6 +22,8 @@ from roman_numeral import convert
     (1889, 'MDCCCLXXXIX'),
     (1989, 'MCMLXXXIX'),
     (3999, 'MMMCMXCIX'),
+    (45, 'XLV'),
+    (3518, 'MMMDXVIII'),
 ])
 def test_convert(number, numeral):
     assert convert(number) == numeral
