@@ -14,6 +14,14 @@ def convert(number):
             number -= number
         else:
             for index, unit in enumerate(units):
+                if unit % 10 == 0:
+                    minor_unit = units[index + 2]
+                    abbreviated_unit = unit - minor_unit
+
+                    if number == abbreviated_unit:
+                        numeral += numerals[minor_unit] + numerals[unit]
+                        number -= abbreviated_unit
+                        break
                 if number > unit:
                     if index != 0:
                         previous_unit = units[index - 1]
