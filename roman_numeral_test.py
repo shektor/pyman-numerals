@@ -13,6 +13,10 @@ from roman_numeral import convert
     (8, 'VIII'),
     (9, 'IX'),
     (10, 'X'),
+    (14, 'XIV'),
+    (21, 'XXI'),
+    (89, 'LXXXIX'),
+    (91, 'XCI'),
 ])
 def test_convert(number, numeral):
     assert convert(number) == numeral
