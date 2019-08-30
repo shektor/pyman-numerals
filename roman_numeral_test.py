@@ -11,6 +11,7 @@ from roman_numeral import convert
     (6, 'VI'),
     (7, 'VII'),
     (8, 'VIII'),
+    (10, 'X'),
 ])
 def test_convert(number, numeral):
     assert convert(number) == numeral
