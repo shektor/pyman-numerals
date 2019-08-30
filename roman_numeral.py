@@ -1,6 +1,3 @@
-import math
-
-
 def convert(number):
     numerals = {
         1: 'I',
@@ -19,7 +16,7 @@ def convert(number):
         if number > 9:
             tens = 1
             while round_one_sig > 9:
-                round_one_sig = math.floor(round_one_sig / 10)
+                round_one_sig = int(round_one_sig / 10)
                 tens = tens * 10
             round_one_sig = round_one_sig * tens
 
