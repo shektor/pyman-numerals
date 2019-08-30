@@ -8,8 +8,10 @@ def convert(number):
         10: 'X',
         50: 'L',
         100: 'C',
+        500: 'D',
+        1000: 'M',
     }
-    units = [100, 50, 10, 5, 1]
+    units = [1000, 500, 100, 50, 10, 5, 1]
 
     numeral = ''
     while number > 0:
